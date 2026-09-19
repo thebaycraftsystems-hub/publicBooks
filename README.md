@@ -7,7 +7,7 @@ Public documents. Scan a QR code to open a file in a browser.
 | Document | Open this link |
 |---|---|
 | Git Fundamentals (phone-friendly) | https://github.com/thebaycraftsystems-hub/publicBooks/blob/main/Git_Fundamentals.md |
-| Git Fundamentals (Word) | https://github.com/thebaycraftsystems-hub/publicBooks/blob/main/Git_Fundamentals.docx |
+| Git Fundamentals (Word, opens in phone browser) | https://view.officeapps.live.com/op/view.aspx?src=https://raw.githubusercontent.com/thebaycraftsystems-hub/publicBooks/main/Git_Fundamentals.docx |
 
 ## Add another document
 
