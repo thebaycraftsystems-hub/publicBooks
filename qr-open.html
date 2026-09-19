@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>publicBooks QR</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 32rem; margin: 3rem auto; padding: 0 1rem; line-height: 1.5; }
+  </style>
+</head>
+<body>
+  <p id="message">Opening document...</p>
+  <script>
+    const params = new URLSearchParams(location.search);
+    const until = params.get("until");
+    const doc = "Git_Fundamentals.html";
+    const message = document.getElementById("message");
+
+    if (!until) {
+      location.replace(doc);
+    } else {
+      const expiry = new Date(until + "T23:59:59");
+      if (Number.isNaN(expiry.getTime())) {
+        message.textContent = "This QR link is invalid.";
+      } else if (new Date() > expiry) {
+        message.textContent = "This QR code expired on " + until + ".";
+      } else {
+        location.replace(doc);
+      }
+    }
+  </script>
+</body>
+</html>
